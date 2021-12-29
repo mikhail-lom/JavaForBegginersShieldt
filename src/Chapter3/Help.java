@@ -1,7 +1,7 @@
 package Chapter3;
 
 /**
- * Simple study program with the manual functions
+ * Simple study program with the help functions
  */
 class Help {
     public static void main(String[] args) throws java.io.IOException { // Exception to the users wrong actions
