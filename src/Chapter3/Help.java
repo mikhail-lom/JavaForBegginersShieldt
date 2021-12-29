@@ -17,12 +17,12 @@ class Help {
         System.out.println("\n");
 
         switch (choice) {
-            case '1':
+            case '1' -> {
                 System.out.println("if expression:\n");
                 System.out.println("if(condition) instruction;");
                 System.out.println("else instruction;");
-                break;
-            case '2':
+            }
+            case '2' -> {
                 System.out.println("Switch expression:\n");
                 System.out.println("switch(expression) {");
                 System.out.println(" case const:");
@@ -32,10 +32,8 @@ class Help {
                 System.out.println("default:");
                 System.out.println(" default case expression;");
                 System.out.println("}");
-                break;
-            default:
-                System.out.print("Request not found.");
-
+            }
+            default -> System.out.print("Request not found.");
         }
 
 
