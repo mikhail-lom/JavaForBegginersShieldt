@@ -1,8 +1,8 @@
 package Chapter3;
 
 /**
- * Extended help system, where "do-while" loop uses for
- * menu items choice
+ * The most extended help system, where infinite "for" loop and "do-while" loop use for
+ * menu items choice. Q-button is for "quite"
  */
 class Help3 {
     public static void main(String[] args) throws java.io.IOException { // Exception to the users wrong actions
