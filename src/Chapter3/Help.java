@@ -6,7 +6,8 @@ package Chapter3;
 class Help {
     public static void main(String[] args) throws java.io.IOException { // Exception to the users wrong actions
 
-        char choice; // input variable
+        // user's input variable
+        char choice;
 
         System.out.println("Help:");
         System.out.println(" 1. if");
