@@ -5,8 +5,7 @@ package Chapter3.ExercisesForSelfControl;
  */
 public class Exercise4 {
     public static void main(String[] args) {
-       for(int i = 1000; i >= 0; i--) {
-           if(i%2 == 1) i--;
+       for(int i = 1000; i >= 0; i -= 2) {
            System.out.print(i + " ");
        }
     }
