@@ -16,11 +16,10 @@ public class Exercise4 {
         System.out.print("Initial array: ");
         for (String s : nonSortedArray) System.out.print(" " + s);
         System.out.println();
-//        for (String s:
-//             nonSortedArray) {
-//            System.out.print(nonSortedArray.);
-//            System.out.println();
-//        }
+        for (String s : nonSortedArray) {
+
+            System.out.println();
+        }
 
         // Bubble sorting algorithm realisation
         for (a = 1; a < size; a++) {
