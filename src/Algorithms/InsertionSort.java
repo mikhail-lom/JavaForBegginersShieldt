@@ -1,5 +1,8 @@
 package Algorithms;
 
+/**
+ * Insertion sort my variant
+ */
 public class InsertionSort {
     public static void main(String[] args) {
         int[] nonSortedArray = {99, -10, 100123, 18, -978, 5623,
