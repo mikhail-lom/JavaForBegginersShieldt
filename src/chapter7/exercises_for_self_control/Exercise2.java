@@ -3,8 +3,9 @@ package chapter7.exercises_for_self_control;
 public class Exercise2 {
     public static void main(String[] args) {
 
-        Circle c1 = new Circle(12.5);
+        Circle c1 = new Circle(12.5,"middle");
 
+        System.out.println(c1.getName());
         System.out.println("Circle area is " + c1.area());
         System.out.println("Alternative area math is " + c1.altArea());
         System.out.printf("Alternative rounded area math is %.4f", c1.altArea());
@@ -15,6 +16,7 @@ public class Exercise2 {
 abstract class TwoDShape {
     private double width;
     private double height;
+    private String name;
 
     //Default constructor
     TwoDShape() {
@@ -22,21 +24,24 @@ abstract class TwoDShape {
     }
 
     //Parametrized constructor
-    TwoDShape(double w, double h) {
+    TwoDShape(double w, double h, String n) {
         width = w;
         height = h;
+        name = n;
     }
 
     //Creation of object with equal
     // dimensions
-    TwoDShape(double x) {
+    TwoDShape(double x, String n) {
         width = height = x;
+        name = n;
     }
 
     //Creation of object based on another object
     TwoDShape(TwoDShape ob) {
         width = ob.width;
         height = ob.height;
+        name = ob.name;
     }
 
     //Access methods to variable copies
@@ -56,6 +61,10 @@ abstract class TwoDShape {
         height = h;
     }
 
+    String getName() {
+        return name;
+    }
+
     void showDim() {
         System.out.println("Width and height - " + width + " and " + height);
     }
@@ -70,8 +79,8 @@ class Circle extends TwoDShape {
     }
 
     //Circle constructor
-    Circle(double x) {
-        super(x);
+    Circle(double x, String n) {
+        super(x,n);
     }
 
     //Circle object on object constructor
@@ -81,12 +90,12 @@ class Circle extends TwoDShape {
 
     //Area method
     double area() {
-        return 3.14 * getHeight() * getHeight();
+        return 3.14 * (getHeight()/2) * (getHeight()/2);
     }
 
     //Alter area method
     double altArea() {
-        return Math.PI * Math.pow(getHeight(), 2);
+        return Math.PI * Math.pow(getHeight()/2, 2);
     }
 
 }
