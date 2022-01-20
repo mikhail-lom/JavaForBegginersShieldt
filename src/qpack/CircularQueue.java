@@ -1,5 +1,9 @@
 package qpack;
 
+/**
+ * Incorrect Circular queue class!
+ * Need detail repair (error in studbook)
+ */
 public class CircularQueue implements ICharQ {
     private char[] q;//Storage array for symbols
     private int putloc, getloc;//indexes of insertion and extraction symbols

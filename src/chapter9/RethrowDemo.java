@@ -14,11 +14,12 @@ class Rethrow {
             }
             catch (ArithmeticException exc) {
                 System.out.println("attempt to divide by zero");
+                System.out.println(exc.getMessage());
             }
             catch (ArrayIndexOutOfBoundsException exc) {
                 System.out.println("Element not found");
                 j++;
-                if (j > 3) {
+                if (j > 1) {
                     throw exc;
                 }
             }
@@ -34,7 +35,10 @@ public class RethrowDemo {
         catch (ArrayIndexOutOfBoundsException exc) {
             System.out.println("Critical error - " +
                     "program work abort");
+            exc.printStackTrace();
         }
 
     }
 }
+
+
