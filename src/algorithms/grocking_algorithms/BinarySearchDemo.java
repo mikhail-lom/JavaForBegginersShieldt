@@ -27,9 +27,11 @@ public class BinarySearchDemo {
 
     public static void main(String[] args) {
         int[] numberArray = {1, 2, 4, 5, 8, 16, 35, 89};
+        char ch = 'X';
 
         System.out.println(binarySearch(numberArray, 16));
         System.out.println(binarySearch(numberArray, 134));
+        System.out.write(ch);
 
 
     }
