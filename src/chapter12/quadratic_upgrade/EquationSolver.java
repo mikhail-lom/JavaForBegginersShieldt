@@ -4,7 +4,7 @@ import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
 
 public class EquationSolver {
-    //a,b,c coefficients of
+    //a,b,c are coefficients of
     //quadratic equation ax^2 + bx + c = 0
     double coefficientA, coefficientB, coefficientC, firstX, secondX, discriminant;
 
