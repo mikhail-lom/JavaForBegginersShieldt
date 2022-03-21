@@ -21,15 +21,15 @@ public class TrafficLightSimulator implements Runnable {
             try {
                 switch (tlc) {
                     case GREEN -> {
-                        Thread.sleep(10000); //Green for 10 sec.
+                        Thread.sleep(tlc.getDelay()); //working Green
                         break;
                     }
                     case YELLOW -> {
-                        Thread.sleep(2000); //Yellow for 2 sec.
+                        Thread.sleep(tlc.getDelay()); //working Yellow
                         break;
                     }
                     case RED -> {
-                        Thread.sleep(12000); //Red for 12 sec.
+                        Thread.sleep(tlc.getDelay()); //working Red
                         break;
                     }
                 }
@@ -43,21 +43,7 @@ public class TrafficLightSimulator implements Runnable {
 
     //Color switch
     synchronized void changeColor() {
-        switch(tlc) {
-            case RED -> {
-                tlc = TrafficLightColor.GREEN;
-                break;
-            }
-            case YELLOW -> {
-
-                tlc = TrafficLightColor.RED;
-                break;
-            }
-            case GREEN -> {
-                tlc = TrafficLightColor.YELLOW;
-                break;
-            }
-        }
+        tlc = tlc.getNext();
 
         changed = true;
         notify();//notify about switching the color
