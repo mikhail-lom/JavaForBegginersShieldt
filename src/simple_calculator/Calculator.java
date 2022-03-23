@@ -6,25 +6,23 @@ public class Calculator {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int num1 = getInt();
-        int num2 = getInt();
+        int num1 = getNumber();
+        int num2 = getNumber();
         char operation = getOperation();
         int result = calc(num1,num2,operation);
-        System.out.println("Результат операции: "+result);
+        System.out.println("Результат операции: " + result);
 
     }
 
-    public static int getInt() {
+    public static int getNumber() {
         System.out.println("Enter number");
         int num;
-        if(scanner.hasNextInt()) {
-            num = scanner.nextInt();
-        } else {
+        if(!scanner.hasNextInt()) {
             System.out.println("You make a mistake while entering number. " +
                     "Try once again.");
             scanner.next();
-            num = getInt();
         }
+            num = scanner.nextInt();
         return num;
     }
 
@@ -45,16 +43,16 @@ public class Calculator {
         int result;
         switch (operation){
             case '+':
-                result = num1+num2;
+                result = num1 + num2;
                 break;
             case '-':
-                result = num1-num2;
+                result = num1 - num2;
                 break;
             case '*':
-                result = num1*num2;
+                result = num1 * num2;
                 break;
             case '/':
-                result = num1/num2;
+                result = num1 / num2;
                 break;
             default:
                 System.out.println("Операция не распознана. Повторите ввод.");

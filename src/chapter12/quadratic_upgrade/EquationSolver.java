@@ -1,5 +1,8 @@
 package chapter12.quadratic_upgrade;
 
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
 
@@ -32,8 +35,5 @@ public class EquationSolver {
             secondX = (-coefficientB - sqrt(discriminant)) / (2 * coefficientA);
             System.out.println("Equation roots are: " + firstX + " and " + secondX);
         }
-
-
     }
-
 }
