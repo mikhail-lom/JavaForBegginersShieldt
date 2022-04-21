@@ -1,26 +1,33 @@
 package test_space;
 
+import java.util.TreeSet;
+
 public class Test {
-    public static void main (String args[]) {
-//        System.out.println("Hello world!");
-//        Test2.methodPrinter();
-//        //Test2.forTestMethod();
-//        Test2.arrayValueGenerator();
+    static String a = "xyaabbbccccdefww";
+    static String b = "xxxxyyyyabklmopq";
 
-        TestInterface tI = () -> 98.6;
-        System.out.println(tI.getTestInterface());
+    public static String longest (String s1, String s2){
+        s1 += s2;
+        System.out.println(s1);
+        char[] buffer = s1.toCharArray();
+        s1 = "";
+        TreeSet<Character> resultSet = new TreeSet<Character>();
+        for (char item :
+                buffer) {
+            resultSet.add(item);
+        }
 
-        MyParamValue myPval = (n) -> {
-            double result;
-            result = 2.0 / n;
-            return result;
-        };
-        System.out.println("Value counter to 4 is equal: " + myPval.getValue(4.0));
-
-
-
-
-
+        for (Character item :
+                resultSet) {
+            s1 += item;
+        }
+        return s1;
     }
+    public static void main(String args[]) {
+        System.out.println(Test.longest(a, b));
+    }
+
 }
+
+
 
